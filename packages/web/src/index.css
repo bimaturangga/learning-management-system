@@ -11,8 +11,12 @@ body {
 input[type="checkbox"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
+input[type="text"]:focus,
+select:focus,
 button:focus {
   box-shadow: none !important;
+  outline: none !important;
+  --tw-ring-shadow: none !important;
 }
 
 /* Hide scrollbar utility */
@@ -23,4 +27,15 @@ button:focus {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Hide native select arrow */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: none;
+}
+
+select::-ms-expand {
+  display: none;
 }

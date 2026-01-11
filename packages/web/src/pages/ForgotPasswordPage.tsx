@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function ForgotPasswordPage() {
     const [email, setEmail] = useState('')
+    const navigate = useNavigate()
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
         console.log('Password reset requested for:', email)
+        // Navigate to set new password page
+        navigate('/set-new-password')
     }
 
     return (
